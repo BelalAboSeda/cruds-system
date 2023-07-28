@@ -1,0 +1,201 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #dodgerblue;
+    --txt-color: #fff;
+    --bg-color: #222;
+    --inp-color: #111;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.crud {
+    width: 80%;
+    margin: auto;
+}
+
+/* start head*/
+.head {
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+/* end head*/
+/* start inputs*/
+.inputs input {
+    width: 100%;
+    background-color: var(--inp-color);
+    height: 35px;
+    outline: none;
+    border: none;
+    margin: 4px 0;
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--txt-color);
+}
+
+input:focus {
+    background-color: #000;
+}
+
+.price input {
+    width: 20%;
+}
+
+#total {
+    background-color: #e50000;
+    padding: 4px;
+    color: var(--txt-color);
+    border-radius: 16px;
+}
+
+#total::before {
+    content: 'Total:';
+}
+
+.button {
+    width: 100%;
+    color: var(--txt-color);
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: dodgerblue;
+    border-radius: 16px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.button:hover {
+    background: rgb(30 144 255 / 90%);
+}
+
+.button:active {
+    transform: translate(0em, 0.2em);
+}
+
+.search input {
+    width: 100%;
+    background-color: var(--inp-color);
+    height: 30px;
+    outline: none;
+    border: none;
+    margin: 4px 0;
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--txt-color);
+}
+
+.search .btnSearch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnSearch button {
+    width: 45%;
+}
+#btnDel{
+    border: 1px solid #cc0000;
+    background-color: #e50000;
+}
+#btnDel:hover{
+    background-color: #cc0000;
+}
+
+/* end inputs*/
+/* start outputs*/
+table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+table th {
+    text-transform: uppercase
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+table .btn-del {
+    position: relative;
+    width: 110%;
+    height: 40px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #cc0000;
+    background-color: #e50000;
+    overflow: hidden;
+}
+#update{
+    width: 90%;
+}
+table .btn-del,
+.button__icon,
+.button__text {
+    transition: all 0.3s;
+}
+
+table .btn-del .button__text {
+    transform: translateX(25px);
+    color: #fff;
+    font-weight: 600;
+}
+
+table .btn-del .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #cc0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table .btn-del .svg {
+    width: 20px;
+}
+
+table .btn-del:hover {
+    background: #cc0000;
+}
+
+table .btn-del:hover .button__text {
+    color: transparent;
+}
+
+table .btn-del:hover .button__icon {
+    width: 148px;
+    transform: translateX(-20px);
+}
+
+table .btn-del:active .button__icon {
+    background-color: #b20000;
+}
+
+table .btn-del:active {
+    border: 1px solid #b20000;
+    transform: translate(0em, 0.2em);
+}
+
+
+/* end  outputs*/
