@@ -37,7 +37,7 @@ create.onclick = function () {
         discount: discount.value,
         total: total.innerHTML,
         count: count.value,
-        category: category.toLowerCase(),
+        category: category.value.toLowerCase(),
     }
     if (mood == 'create') {
         if (newPro.count > 1) {
@@ -207,4 +207,4 @@ function searchData(value) {
         }
         document.getElementById('tbody').innerHTML = table;
     }
-}
+} 
